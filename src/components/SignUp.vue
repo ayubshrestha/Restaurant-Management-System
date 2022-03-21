@@ -10,7 +10,7 @@
       <router-link to="/login">login</router-link>
     </p>
   </div>
-</template>
+</template>  
 <script>
 import axios from "axios";
 export default {
@@ -31,9 +31,8 @@ export default {
         password: this.password,
       });
       console.log(result);
-      if (result.status == 201 && !this.name) {
-        console.log(this.name, "XXX");
-        localStorage.setItem("user-info", JSON.stringify(result.data));
+      if (result.status == 201) {
+        localStorage.setItem("user-info", JSON.stringify(result.data[0]));
         this.$router.push({ name: "Home" });
       }
     },

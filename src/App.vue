@@ -38,7 +38,7 @@ body{
     width: 500px;
     background-color: rgb(174, 248, 171);
 } */
-.register input, .login input {
+.register input, .login input, .form input {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -55,7 +55,7 @@ body{
   color: rgb(23, 150, 201);
 }
 
-.register button, .login button {
+.register button, .login button, .form button {
   width: 320px;
   height: 40px;
   border: 1px solid skyblue;
@@ -78,5 +78,8 @@ a:-webkit-any-link {
 a:-webkit-any-link:hover {
     opacity: 0.8;
 }
+input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
 
 </style>
