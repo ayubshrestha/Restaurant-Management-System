@@ -22,13 +22,16 @@ export default {
   },
   methods: {
     async login() {
+      console.log("XXX")
       let result = await axios.get(
         `http://localhost:3000/users?email=${this.email}&password=${this.password}`
       );
+      console.log(result)
       if (result.status == 200 && result.data.length > 0) {
         localStorage.setItem("user-info", JSON.stringify(result.data[0]));
         this.$router.push({ name: "Home" });
-      } else {
+      } 
+      else {
         this.email = "";
         this.password = "";
         alert("ID or Password Not Matched");
