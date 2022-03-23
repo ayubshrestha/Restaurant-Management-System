@@ -1,4 +1,5 @@
 # resto-project
+A simple Restaurant Management System made with Vue. User should sign up for the system, and once signed up, the user gets the feature to add, update and delete restaurants. The user can logout from the system. To login, the email and password credentials must be matched.
 
 ## Project setup
 ```
